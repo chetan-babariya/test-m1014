@@ -27,9 +27,13 @@
       },
       {
         "type": "image_picker",
-        "id": "favicon",
-        "label": "t:settings_schema.logo.settings.favicon.label",
-        "info": "t:settings_schema.logo.settings.favicon.info"
+        "id": "favicon_light",
+        "label": "Favicon for Light Mode"
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon_dark",
+        "label": "Favicon for Dark Mode"
       }
     ]
   },
