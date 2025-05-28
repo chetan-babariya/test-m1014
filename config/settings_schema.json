@@ -26,19 +26,14 @@
         "label": "t:settings_schema.logo.settings.logo_width.label"
       },
       {
-        "name": "Favicon",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "favicon_light",
-            "label": "Favicon for Light Mode"
-          },
-          {
-            "type": "image_picker",
-            "id": "favicon_dark",
-            "label": "Favicon for Dark Mode"
-          }
-        ]
+        "type": "image_picker",
+        "id": "favicon_light",
+        "label": "Favicon for Light Mode"
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon_dark",
+        "label": "Favicon for Dark Mode"
       }
     ]
   },
