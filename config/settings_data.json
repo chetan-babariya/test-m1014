@@ -9,8 +9,8 @@
  */
 {
   "current": {
+    "logo": "shopify://shop_images/logotext.png",
     "logo_width": 90,
-    "favicon": "shopify://shop_images/Pngtree_skull_icon_logo_vector_illuatration_7964583.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -38,8 +38,8 @@
     "inputs_border_thickness": 1,
     "inputs_border_opacity": 55,
     "inputs_radius": 0,
-    "inputs_shadow_opacity": 0,
-    "inputs_shadow_horizontal_offset": 0,
+    "inputs_shadow_opacity": 20,
+    "inputs_shadow_horizontal_offset": 4,
     "inputs_shadow_vertical_offset": 4,
     "inputs_shadow_blur": 5,
     "card_style": "standard",
@@ -48,11 +48,11 @@
     "card_color_scheme": "scheme-2",
     "card_border_thickness": 0,
     "card_border_opacity": 10,
-    "card_corner_radius": 0,
-    "card_shadow_opacity": 0,
-    "card_shadow_horizontal_offset": 0,
+    "card_corner_radius": 20,
+    "card_shadow_opacity": 40,
+    "card_shadow_horizontal_offset": 6,
     "card_shadow_vertical_offset": 4,
-    "card_shadow_blur": 5,
+    "card_shadow_blur": 40,
     "collection_card_style": "standard",
     "collection_card_image_padding": 0,
     "collection_card_text_alignment": "left",
@@ -127,6 +127,7 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "favicon": "shopify://shop_images/Pngtree_skull_icon_logo_vector_illuatration_7964583.png",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
