@@ -76,10 +76,17 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "hero-sec":{
+      "type": "testsection",
+      "settings": {
+        
+      }
     }
   },
   "order": [
     "image_banner",
+    "hero-sec",
     "featured_collection"
   ]
 }

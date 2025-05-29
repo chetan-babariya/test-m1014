@@ -1,0 +1,22 @@
+{{ 'test.css' | asset_url | stylesheet_tag }}
+{{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
+    
+    <section class="hero-wrapper position-relative">
+        <div class="hero-img">
+            <img src="{{ 'img2.png' |  asset_url }}" alt="">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="d-flex hero-title">
+                        <hr class="flex-grow-1 mb-auto mt-auto">
+                        <p class="mb-0">CASTLE HEALTH</p>
+                    </div>
+                    <h1>THE HEART OF YOUR <br> RECOVERY JOURNEY</h1>
+                    <p class="pb-5 pt-5">Castle Health Group is an international network of addiction and mental
+                        health treatment
+                        centres and services with locations across the UK and Europe. Castle Health is family-run,
+                        with compassion at the heart of our journey.</p>
+                    <a class="rounded-pill custom-btn" href="#">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
