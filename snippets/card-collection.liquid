@@ -35,7 +35,7 @@
   <div
     class="
       card
-      card--card
+      card--{{ card_style }}
       {% if card_collection.featured_image %} card--media{% else %} card--text{% endif %}
       {% if card_style == 'card' %} color-{{ card_color_scheme }} gradient{% endif %}
       {% if extend_height %} card--extend-height{% endif %}

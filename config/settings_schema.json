@@ -1,7 +1,7 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Dawn",
+    "theme_name": "Trade",
     "theme_version": "15.3.0",
     "theme_author": "Shopify",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
@@ -27,13 +27,9 @@
       },
       {
         "type": "image_picker",
-        "id": "favicon_light",
-        "label": "Favicon for Light Mode"
-      },
-      {
-        "type": "image_picker",
-        "id": "favicon_dark",
-        "label": "Favicon for Dark Mode"
+        "id": "favicon",
+        "label": "t:settings_schema.logo.settings.favicon.label",
+        "info": "t:settings_schema.logo.settings.favicon.info"
       }
     ]
   },
@@ -135,7 +131,7 @@
       {
         "type": "font_picker",
         "id": "type_body_font",
-        "default": "assistant_n4",
+        "default": "jost_n4",
         "label": "t:settings_schema.typography.settings.type_body_font.label"
       },
       {
@@ -491,6 +487,22 @@
   {
     "name": "t:settings_schema.cards.name",
     "settings": [
+      {
+        "type": "select",
+        "id": "card_style",
+        "options": [
+          {
+            "value": "standard",
+            "label": "t:settings_schema.cards.settings.style.options__1.label"
+          },
+          {
+            "value": "card",
+            "label": "t:settings_schema.cards.settings.style.options__2.label"
+          }
+        ],
+        "default": "standard",
+        "label": "t:settings_schema.cards.settings.style.label"
+      },
       {
         "type": "range",
         "id": "card_image_padding",
