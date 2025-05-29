@@ -8,6 +8,7 @@
  * ------------------------------------------------------------
  */
 {
+  "layout": "originaltheme",
   "sections": {
     "main": {
       "type": "main-search",
