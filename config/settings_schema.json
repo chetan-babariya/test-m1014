@@ -492,22 +492,6 @@
     "name": "t:settings_schema.cards.name",
     "settings": [
       {
-        "type": "select",
-        "id": "card_style",
-        "options": [
-          {
-            "value": "standard",
-            "label": "t:settings_schema.cards.settings.style.options__1.label"
-          },
-          {
-            "value": "card",
-            "label": "t:settings_schema.cards.settings.style.options__2.label"
-          }
-        ],
-        "default": "card",
-        "label": "t:settings_schema.cards.settings.style.label"
-      },
-      {
         "type": "range",
         "id": "card_image_padding",
         "min": 0,
