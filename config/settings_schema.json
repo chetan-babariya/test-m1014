@@ -497,7 +497,7 @@
         "options": [
           {
             "value": "standard",
-            "label": "t:settings_schema.cards.settings.style.options__1.label"
+            "label": "t:settings_schema.cards.settings.style.options__2.label"
           },
           {
             "value": "card",
