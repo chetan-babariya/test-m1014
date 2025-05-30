@@ -17,18 +17,26 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "New Styles On Sale: Up To 40% Off",
+            "link": "shopify://collections"
+          }
+        },
+        "announcement_NBLKWQ": {
+          "type": "announcement",
+          "settings": {
+            "text": "Move, Shop, Customise & Celebrate With Us",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_NBLKWQ"
       ],
       "settings": {
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "color_scheme": "scheme-1",
+        "auto_rotate": true,
+        "change_slides_speed": 3,
+        "color_scheme": "scheme-2",
         "show_line_separator": true,
         "show_social": false,
         "enable_country_selector": false,
