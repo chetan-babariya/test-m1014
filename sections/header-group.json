@@ -20,18 +20,10 @@
             "text": "New Styles On Sale: Up To 40% Off",
             "link": "shopify://collections"
           }
-        },
-        "announcement_NBLKWQ": {
-          "type": "announcement",
-          "settings": {
-            "text": "Move, Shop, Customise & Celebrate With Us",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "announcement-bar-0",
-        "announcement_NBLKWQ"
+        "announcement-bar-0"
       ],
       "settings": {
         "auto_rotate": true,
