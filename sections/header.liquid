@@ -17,62 +17,104 @@
 {%- endif -%}
 
 <style>
-  header-drawer {
-    justify-self: start;
-    margin-left: -1.2rem;
-  }
-
-  {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
-    .scrolled-past-header .header__heading-logo-wrapper {
-      width: 75%;
+    header-drawer {
+      justify-self: start;
+      margin-left: -1.2rem;
     }
-  {%- endif -%}
 
-  {%- if section.settings.menu_type_desktop != "drawer" -%}
-    @media screen and (min-width: 990px) {
-      header-drawer {
-        display: none;
+    {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
+      .scrolled-past-header .header__heading-logo-wrapper {
+        width: 75%;
+      }
+    {%- endif -%}
+
+    {%- if section.settings.menu_type_desktop != "drawer" -%}
+      @media screen and (min-width: 990px) {
+        header-drawer {
+          display: none;
+        }
+      }
+    {%- endif -%}
+
+    .menu-drawer-container {
+      display: flex;
+    }
+
+    .list-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .list-menu--inline {
+      display: inline-flex;
+      flex-wrap: wrap;
+    }
+
+    summary.list-menu__item {
+      padding-right: 2.7rem;
+    }
+
+    .list-menu__item {
+      display: flex;
+      align-items: center;
+      line-height: calc(1 + 0.3 / var(--font-body-scale));
+    }
+
+    .list-menu__item--link {
+      text-decoration: none;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+      line-height: calc(1 + 0.8 / var(--font-body-scale));
+    }
+
+    @media screen and (min-width: 750px) {
+      .list-menu__item--link {
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
       }
     }
-  {%- endif -%}
 
-  .menu-drawer-container {
-    display: flex;
+  .search-form {
+    position: relative;
+    max-width: 30rem;
+    width: 100%;
   }
 
-  .list-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .search-input {
+    width: 100%;
+    padding: 1.3rem 5.8rem 1.3rem 1.3rem;
+    border: 1px solid #e8e8e8;
+    border-radius: 25px;
+    font-size: 14px;
   }
 
-  .list-menu--inline {
-    display: inline-flex;
-    flex-wrap: wrap;
+  .search-input:focus {
+    outline: none;
+    box-shadow: none;
   }
 
-  summary.list-menu__item {
-    padding-right: 2.7rem;
+  .search-button {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    border: solid 1px #88c8bc;
+    border-radius: 50%;
+    background-color: #88c8bc;
+    height: 100%;
+    aspect-ratio: 1/1;
+    transition: all 0.4s ease;
   }
 
-  .list-menu__item {
-    display: flex;
-    align-items: center;
-    line-height: calc(1 + 0.3 / var(--font-body-scale));
+  .search-button svg {
+    width: 1.6rem;
+    height: 1.6rem;
   }
 
-  .list-menu__item--link {
-    text-decoration: none;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    line-height: calc(1 + 0.8 / var(--font-body-scale));
-  }
-
-  @media screen and (min-width: 750px) {
-    .list-menu__item--link {
-      padding-bottom: 0.5rem;
-      padding-top: 0.5rem;
-    }
+  .search-button:hover{
+    background-color: #000000;
+    border-color: #000000;
+    transition: all 0.4s ease;
   }
 </style>
 
@@ -232,8 +274,22 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
-
+      <div class="search-container">
+        <form action="{{ routes.search_url }}" method="get" class="search-form" role="search">
+          <input
+            type="search"
+            name="q"
+            class="search-input"
+            placeholder="{{ 'general.search.search' | t }}"
+            aria-label="{{ 'general.search.search' | t }}"
+          >
+          <button type="submit" class="search-button">
+            <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 32 32">
+              <path fill="#ffffff" d="M31.008 27.231l-7.58-6.447c-0.784-0.705-1.622-1.029-2.299-0.998 1.789-2.096 2.87-4.815 2.87-7.787 0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12c2.972 0 5.691-1.081 7.787-2.87-0.031 0.677 0.293 1.515 0.998 2.299l6.447 7.58c1.104 1.226 2.907 1.33 4.007 0.23s0.997-2.903-0.23-4.007zM12 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"></path>
+            </svg>
+          </button>
+        </form>
+      </div>
       {%- if shop.customer_accounts_enabled -%}
         <a
           href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
