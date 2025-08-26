@@ -79,7 +79,7 @@
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "image_banner"
   ]
 }
